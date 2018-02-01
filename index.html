@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.rawgit.com/blueimp/JavaScript-MD5/da202aebc0436c715e074525affc4e9416309fc3/js/md5.min.js"></script>
+</head>
+<body>
+<input id="hash" type="text">
+<p id="hashout"></p>
+<script>
+function chunkString(str, length) {
+  return str.match(new RegExp('.{1,' + length + '}', 'g'));
+}
+function f() {
+  document.getElementById('hashout').textContent = `
+{
+    "email": "${document.getElementById('hash').value}",
+    "license_key": "${chunkString(md5(document.getElementById('hash').value).toLowerCase(), 5).slice(0, 5).join('-')}"
+}
+`;
+}
+document.getElementById('hash').onchange = f;
+document.getElementById('hash').onkeyup = f;
+</script>
+</body>
+</html>
