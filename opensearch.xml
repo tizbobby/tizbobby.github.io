@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-<ShortName>Search My Site</ShortName>
-<Description>Search My Site</Description>
-<Url type="text/html" method="get" template="https://tizbobby.github.io/s.html#{searchTerms}"/>
+<ShortName>Random Searx</ShortName>
+<Description>Random Searx</Description>
+<Url type="text/html" method="get" template="https://randomsearx.github.io/s.html#{searchTerms}"/>
 </OpenSearchDescription>
